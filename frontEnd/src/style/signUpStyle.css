@@ -1,0 +1,87 @@
+/* .signupWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50% );
+} */
+
+.signupDiv {
+    position: relative;
+}
+
+.signupDiv input {
+    border: none;
+    border-bottom: 1px solid rgba(149, 149, 149, 0.986);
+    border-radius: 2px;
+}
+
+.signupDiv input:focus-visible {
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 1px;
+    outline: none;
+}
+
+.signupDiv span{
+left: 5px;
+}
+
+/* @media (max-width:992px) {
+    
+    .signupWrap {
+        transform: translate(-50%, calc(-50% + 55px));
+    }
+
+} */
+
+
+
+
+
+
+
+
+/* .signUp_small_window {
+    height: 580px;
+    max-height: 90%;
+    max-width: 664px;
+    width: 50vw;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    background: lightblue;
+}
+
+.signUpForm {
+    height: 80%;
+    width: calc(100% - 1rem);
+    background-color: white;
+    position: absolute;
+    bottom: .5rem;
+}
+
+
+.inputsWraper {
+    max-width: 90%;
+    width: 500px;
+    font-size: 1.5rem;
+}
+
+.signUpForm .inputWrap {
+    position: relative;
+    padding: 1.5em;
+    width: 100%;
+}
+
+.signUpForm .inputWrap label {
+    position: absolute;
+    height: 1em;
+    top: 0;
+}
+
+.signUpForm .input {
+    width: 100%;
+} */

@@ -1,0 +1,36 @@
+.login_big_window {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(32, 32, 32, 0.747);
+    display: flex;
+}
+
+.login_small_window {
+    height: 580px;
+    max-height: 90%;
+    max-width: 664px;
+    width: 50vw;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    overflow-y: scroll;
+}
+.login_small_window> form{
+}
+
+.login_small_window>button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.submit_btn {
+    /* background:green ; */
+    margin-top: 20px;
+    margin: 0 auto;
+}

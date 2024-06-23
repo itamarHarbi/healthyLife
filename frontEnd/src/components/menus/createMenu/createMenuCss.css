@@ -1,0 +1,13 @@
+.main_create_menu .h1 {
+    text-shadow: 0px 2px 5px rgb(112, 112, 112);
+}
+
+.main_create_menu .h2 {
+    text-shadow: 0px 2px 5px rgb(112, 112, 112);
+    border-bottom: 5px rgba(185, 185, 185, 0.824) solid;
+    border-radius: 3px;
+}
+.main_create_menu .description{
+    min-width: 80%;
+    min-height: 150px;
+}

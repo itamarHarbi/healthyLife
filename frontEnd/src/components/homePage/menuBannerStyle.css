@@ -1,0 +1,48 @@
+.menuBanner > div:not(:last-child){
+    box-shadow: 0px 1px 2px 0.2px rgba(134, 134, 134, 0.626);
+    margin-bottom: 5px;
+}
+
+.profilePicWrap {
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 40px;
+    max-height: 40px;
+    border: 2px  rgb(185, 185, 185) solid;
+    box-shadow: 2px 3px 7px -5px black;
+}
+
+
+.profilePicWrap img {
+    height: 100%;
+    width: 100%;
+}
+
+.banHeadRight h3{
+    height: fit-content;
+}
+.editMenuDots{
+    position: absolute;
+}
+
+.editMenuDots::after{
+display: none;
+}
+
+.menuBanner a{
+    text-decoration: none;
+    color: inherit;
+}
+.menuBanner .createDateWrap{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: large;
+}
+
+.menuBanner .descripWrap h3{
+    text-decoration: underline  rgba(0, 0, 0, 0.689);
+}
+
+.menuBanner .descripWrap p{
+font-weight: 500;
+}

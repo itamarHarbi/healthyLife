@@ -1,0 +1,30 @@
+.tableWrap {
+    max-height: min(600px,90vh) ;
+}
+
+.header {
+    padding: 5px ;
+    white-space: nowrap;
+    font-size: larger;
+}
+.header span{
+    font-weight: 400;
+    font-size: small;
+}
+td{
+    font-size: medium;
+}
+
+td:nth-child(1),
+th:nth-child(1) {
+    /* background-color: bisque; */
+    max-width: 25vw;
+}
+
+@media (max-width:992px) {
+    .tableWrap {
+        max-height: 80vh;
+    }
+
+
+}

@@ -1,0 +1,704 @@
+[
+    {
+        "id": "shmmitzrach",
+        "type": "text",
+        "info": {
+            "label": "שם מצרך",
+            "notes": "",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "psolet",
+        "type": "numeric",
+        "info": {
+            "label": "פסולת",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "ahuz_ibud_nozlim",
+        "type": "numeric",
+        "info": {
+            "label": "אחוז איבוד נוזלים",
+            "notes": "יחידות מידה : אחוז",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "protein",
+        "type": "numeric",
+        "info": {
+            "label": "חלבון",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "total_fat",
+        "type": "numeric",
+        "info": {
+            "label": "סך שומנים",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "carbohydrates",
+        "type": "numeric",
+        "info": {
+            "label": "פחמימות זמינות",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "food_energy",
+        "type": "numeric",
+        "info": {
+            "label": "אנרגיה",
+            "notes": "יחידות מידה : ק\"קל",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "alcohol",
+        "type": "numeric",
+        "info": {
+            "label": "אלכוהול",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "moisture",
+        "type": "numeric",
+        "info": {
+            "label": "לחות",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "total_dietary_fiber",
+        "type": "numeric",
+        "info": {
+            "label": "סיבים",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "calcium",
+        "type": "numeric",
+        "info": {
+            "label": "סידן",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "iron",
+        "type": "numeric",
+        "info": {
+            "label": "ברזל",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "magnesium",
+        "type": "numeric",
+        "info": {
+            "label": "מגנזיום",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "phosphorus",
+        "type": "numeric",
+        "info": {
+            "label": "זרחן",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "potassium",
+        "type": "numeric",
+        "info": {
+            "label": "אשלגן",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "sodium",
+        "type": "numeric",
+        "info": {
+            "label": "נתרן",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "zinc",
+        "type": "numeric",
+        "info": {
+            "label": "אבץ",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "copper",
+        "type": "numeric",
+        "info": {
+            "label": "נחושת",
+            "notes": "יחדיות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "vitamin_a_iu",
+        "type": "numeric",
+        "info": {
+            "label": "ויטמין A-IU ",
+            "notes": "יחידות מידה : יב\"ל",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "carotene",
+        "type": "numeric",
+        "info": {
+            "label": "קרוטן",
+            "notes": "יחידות מידה : מק\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "vitamin_e",
+        "type": "numeric",
+        "info": {
+            "label": "ויטמין E",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "vitamin_c",
+        "type": "numeric",
+        "info": {
+            "label": "ויטמין C",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "thiamin",
+        "type": "numeric",
+        "info": {
+            "label": "תיאמין",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "riboflavin",
+        "type": "numeric",
+        "info": {
+            "label": "ריבופלאבין",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "niacin",
+        "type": "numeric",
+        "info": {
+            "label": "ניאצין",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "vitamin_b6",
+        "type": "numeric",
+        "info": {
+            "label": "ויטמין B6",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "folate",
+        "type": "numeric",
+        "info": {
+            "label": "פולאט",
+            "notes": "יחידות מידה : מק\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "folate_dfe",
+        "type": "text",
+        "info": {
+            "label": "סך פולאט",
+            "notes": "יחידות מידה : מק\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "vitamin_b12",
+        "type": "numeric",
+        "info": {
+            "label": "ויטמין B12",
+            "notes": "יחידות מידה : מק\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "cholesterol",
+        "type": "numeric",
+        "info": {
+            "label": "כולסטרול",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "saturated_fat",
+        "type": "numeric",
+        "info": {
+            "label": "שומן רווי",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "butyric",
+        "type": "numeric",
+        "info": {
+            "label": "ח. בוטירית 4:00",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "caproic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. קפרואית 6:00",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "caprylic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. קפרילית 8:00",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "capric",
+        "type": "numeric",
+        "info": {
+            "label": "ח.קפרית 10:0",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "lauric",
+        "type": "numeric",
+        "info": {
+            "label": "ח. לאורית 12:0",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "myristic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. מיריסטית 14:0",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "palmitic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. פלמיטית 16:0",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "stearic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. סטיארית 18:0",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "oleic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. אוליאית 18:1",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "linoleic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. לינוליאית 18:2",
+            "notes": "יחידות מיחדה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "linolenic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. לינולנית 18:3",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "arachidonic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. ארכידונית 20:4",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "docosahexanoic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. DHA 22:6",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "palmitoleic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. פלמיטולאית 16:1",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "parinaric",
+        "type": "numeric",
+        "info": {
+            "label": "ח. פרינרית 18:4",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "gadoleic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. גדולאית 20:1",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "eicosapentaenoic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. EPA 20:5",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "erucic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. ארוסית 22:1",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "docosapentaenoic",
+        "type": "numeric",
+        "info": {
+            "label": "ח. שומן DPA 22:5",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "mono_unsaturated_fat",
+        "type": "numeric",
+        "info": {
+            "label": "שומון חד בלתי רווי",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "poly_unsaturated_fat",
+        "type": "numeric",
+        "info": {
+            "label": "שומון רב בלתי רווי",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "vitamin_d",
+        "type": "numeric",
+        "info": {
+            "label": "ויטמין D",
+            "notes": "יחידות מידה : מק\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "total_sugars",
+        "type": "numeric",
+        "info": {
+            "label": "סוכרים",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "trans_fatty_acids",
+        "type": "numeric",
+        "info": {
+            "label": "שומן טרנס",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "vitamin_a_re",
+        "type": "numeric",
+        "info": {
+            "label": "ויטמין A -RAE",
+            "notes": "יחידות מידה : מק\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "isoleucine",
+        "type": "numeric",
+        "info": {
+            "label": "איזוליאוצין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "leucine",
+        "type": "numeric",
+        "info": {
+            "label": "לאוצין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "valine",
+        "type": "numeric",
+        "info": {
+            "label": "ואלין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "lysine",
+        "type": "numeric",
+        "info": {
+            "label": "ליזין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "threonine",
+        "type": "numeric",
+        "info": {
+            "label": "תריאונין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "methionine",
+        "type": "numeric",
+        "info": {
+            "label": "מתיונין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "phenylalanine",
+        "type": "numeric",
+        "info": {
+            "label": "פנילאלנין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "tryptophan",
+        "type": "numeric",
+        "info": {
+            "label": "טריפטופן",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "histidine",
+        "type": "numeric",
+        "info": {
+            "label": "היסטידין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "tyrosine",
+        "type": "numeric",
+        "info": {
+            "label": "טירוזין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "arginine",
+        "type": "numeric",
+        "info": {
+            "label": "ארגינין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "cystine",
+        "type": "numeric",
+        "info": {
+            "label": "ציסטאין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "serine",
+        "type": "numeric",
+        "info": {
+            "label": "סרין",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "vitamin_k",
+        "type": "numeric",
+        "info": {
+            "label": "ויטמין K",
+            "notes": "יחידות מידה : מק\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "pantothenic_acid",
+        "type": "numeric",
+        "info": {
+            "label": "ח. פנטוטונית",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "iodine",
+        "type": "numeric",
+        "info": {
+            "label": "יוד",
+            "notes": "יחידות מידה : מק\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "selenium",
+        "type": "numeric",
+        "info": {
+            "label": "סלניום",
+            "notes": "יחידות מידה : מק\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "sugar_alcohols",
+        "type": "numeric",
+        "info": {
+            "label": "רב כוהלים",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "choline",
+        "type": "numeric",
+        "info": {
+            "label": "כולין",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "biotin",
+        "type": "numeric",
+        "info": {
+            "label": "ביוטין",
+            "notes": "יחידות מידה : מק\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "manganese",
+        "type": "numeric",
+        "info": {
+            "label": "מנגן",
+            "notes": "יחידות מידה : מ\"ג",
+            "type_override": ""
+        }
+    },
+    {
+        "id": "fructose",
+        "type": "numeric",
+        "info": {
+            "label": "פרוקטוז",
+            "notes": "יחידות מידה : גרם",
+            "type_override": ""
+        }
+    }
+]

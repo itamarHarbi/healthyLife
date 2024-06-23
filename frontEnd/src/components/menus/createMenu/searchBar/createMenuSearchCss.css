@@ -1,0 +1,40 @@
+.addItemRow *{
+    z-index: 2;
+}
+.addItemRow{
+    min-height: 50px;
+    font-size: 1.2em;
+    align-items: center;
+}
+
+
+.addItemRow>div {
+    border-left: 1px rgb(186, 186, 186) solid;
+}
+
+
+#select-item * {
+    border: none;
+}
+
+#select-mida * {
+    border: none
+}
+
+#select-amount {
+    border: none !important
+}
+
+input::placeholder {
+    text-align: right;
+
+}
+
+
+
+@media (max-width:992px) {
+    .addItemRow>div {
+        border-left: none;
+    }
+
+}

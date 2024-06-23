@@ -1,0 +1,104 @@
+#profilePage section .infoWrap .profileImage {
+    width: 120px;
+}
+#profilePage section .userImageWrap:not(.noAuther) {
+    cursor: pointer;
+}
+
+#profilePage section>.userImageWrap.auther:hover {
+    border: 0.6px solid black;
+
+}
+
+#profilePage section>.userImageWrap.auther[aria-label]:hover:after {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    content: attr(aria-label);
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    background: rgba(101, 101, 101, 0.46);
+    padding: 3px;
+    font-size: 0.8em;
+}
+
+#profilePage section>.userImageWrap.auther:hover::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f304";
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+}
+
+#profilePage .userImageWrap img {
+    width: 100%;
+    aspect-ratio: 1;
+
+    background: linear-gradient(90deg, #a1a1a1, #5b5b5b, #a1a1a1, #5b5b5b);
+    background-size: 400% 400%;
+
+    animation: gradient 2s ease infinite;
+
+}
+
+
+
+
+#profilePage .editBackDrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    display: flex;
+    z-index: 101;
+    background: rgba(119, 136, 153, 0.182);
+
+}
+
+#profilePage .editBackDrop .imgContainer {
+    overflow-y: scroll;
+    width: 500px;
+    max-height: 90vh;
+    max-width: 80vw;
+    min-height: 300px;
+    min-width: 300px;
+    justify-content: space-around;
+    z-index: 110;
+}
+
+#profilePage .editBackDrop .imgContainer img:not(hover){
+    filter: brightness(70%) ;
+}
+#profilePage .editBackDrop .imgContainer img:hover{
+    border: greenyellow 2px solid;
+    filter: unset;
+}
+#profilePage .editBackDrop .imgContainer .active img{
+    filter: unset;
+    border: greenyellow 2px solid;
+}
+
+.imgContainer>.userImageWrap {
+    width: 100px;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
