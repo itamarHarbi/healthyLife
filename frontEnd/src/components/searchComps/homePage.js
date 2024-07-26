@@ -4,7 +4,7 @@ import { apiGet } from '../../services/apiServices';
 import UseBanners from '../../hooks/useBanners';
 import BannersContainer from './bannersContainer';
 
-export default function HomePage() {
+export default function OldHomePage() {
     // const [banners, setBanners] = useState([])
 
 

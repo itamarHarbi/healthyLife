@@ -1,0 +1,55 @@
+body{
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+.welcomePoster {
+    position: relative;
+    background-image: url("/public/images/homePgaePoster.jpg");
+    background-position: center;
+    background-size: cover;
+
+    min-height: 30rem;
+    text-shadow: 1px 1px 2px rgb(97, 97, 97);
+    width: 100%;
+}
+
+.welcomePoster h1 {
+    font-family: "Edu AU VIC WA NT Hand";
+
+}
+
+.welcomePoster .buttonsContainer {
+    position: absolute;
+    bottom: 10px;
+}
+.homePageMain .box {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.homePageMain .i-wrap {
+    padding: 5px;
+    width: fit-content;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+@keyframes posterAnim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
+.welcomePoster .in-view {
+    animation: posterAnim 300ms;
+}

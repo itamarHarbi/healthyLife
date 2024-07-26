@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { apiGet } from '../../services/apiServices'
-import MenuBanner from '../homePage/menuBanner';
+import MenuBanner from '../searchComps/menuBanner';
 
 export default function BannersRender() {
     const [banners, setBanners] = useState([])

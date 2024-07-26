@@ -1,5 +1,5 @@
 import React from 'react'
-import BannersContainer from '../homePage/bannersContainer'
+import BannersContainer from '../searchComps/bannersContainer'
 import BannersRender from './bannersRender'
 
 export default function SearchPage() {

@@ -1,0 +1,9 @@
+footer{
+    min-height: 100px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgb(229, 229, 229) 0%, rgb(255, 255, 255) 30%);
+}
+footer i{
+color: black;
+    
+}

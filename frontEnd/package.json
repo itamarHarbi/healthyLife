@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.5.0",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "eslint-plugin-react-hooks": "^4.6.2",
     "joi": "^17.13.1",
     "rc-table": "^7.36.1",

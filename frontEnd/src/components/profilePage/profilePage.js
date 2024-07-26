@@ -7,7 +7,7 @@ import ErrorComp from '../error/error'
 import PageLoading from '../overlays/pageLoading'
 import UserStats from './userStats'
 import "./profilePageStyle.css"
-import BannersContainer from '../homePage/bannersContainer'
+import BannersContainer from '../searchComps/bannersContainer'
 
 
 export default function ProfilePage() {
