@@ -1,4 +1,4 @@
-import { React, useContext, useEffect } from 'react'
+import { React, useContext } from 'react'
 import '../../style/header.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -6,37 +6,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Login from './loginF/login';
 import SignedUser from './navBar/signedUser';
 import { IsSignedInContext } from '../../contexts';
-import { ApiUrl, apiMethod } from '../../services/apiServices';
 import SearchMenus from '../menus/searchMenus/searchMenus';
 
 
 
 export default function MainHeader() {
-  const { isSignedIn, setIsSignedIn } = useContext(IsSignedInContext)
+  const { isSignedIn,  } = useContext(IsSignedInContext)
 
-
-  const validateUser = async () => {
-    try {
-      const token = localStorage.getItem("Healthy-Token")
-      if (token && token !== "undefined") {
-        const valid = await apiMethod(
-          `${ApiUrl}/users/auth`,
-          "GET",
-          {}
-        )
-        console.log(valid);
-        if (!isSignedIn) setIsSignedIn(true)
-        console.log("pass");
-        return true
-      }
-      localStorage.removeItem("Healthy-Token")
-      setIsSignedIn(false)
-    }
-    catch (err) {
-      setIsSignedIn(false)
-      console.log(err);
-    }
-  }
 
 
   return (

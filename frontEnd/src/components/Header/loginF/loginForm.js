@@ -1,4 +1,4 @@
-import { React, useContext, useState } from 'react';
+import { React, useContext} from 'react';
 import CloseButton from 'react-bootstrap/CloseButton';
 import { useForm } from "react-hook-form";
 import { ApiUrl, apiMethod, KEY_TOKEN } from '../../../services/apiServices';
@@ -14,7 +14,7 @@ import { IsSignedInContext } from '../../../contexts';
 export default function LoginForm({scroll}) {
 
     const { register, setValue, handleSubmit, formState: { errors } } = useForm();
-    const { isSignedIn, setIsSignedIn } = useContext(IsSignedInContext)
+    const {  setIsSignedIn } = useContext(IsSignedInContext)
 
     const onSubmit = async (_data) => {
         const url = ApiUrl + "/users/signIn";
@@ -33,11 +33,11 @@ export default function LoginForm({scroll}) {
     };
 
 
-    const { use, changeView } = useContext(ActiveContext)
+    const {  changeView } = useContext(ActiveContext)
 
     return (
         <div className={'login_big_window  '} onClick={(e) => {
-            if (e.currentTarget != e.target) return;
+            if (e.currentTarget !== e.target) return;
             changeView(false)
         }}>
             <div className='login_small_window p-2 bg-light rounded-3 p-3 d-flex'>

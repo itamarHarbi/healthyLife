@@ -13,7 +13,7 @@ import Footer from './components/footer/footer';
 export default function AppRoutes() {
     // const navigate = useNavigate()
 
-    const { isSignedIn, setIsSignedIn } = useContext(IsSignedInContext)
+    const { isSignedIn } = useContext(IsSignedInContext)
 
 
     return (<>

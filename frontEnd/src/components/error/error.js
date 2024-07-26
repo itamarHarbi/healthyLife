@@ -1,5 +1,4 @@
 import React from 'react'
-import { useParams, useSearchParams } from 'react-router-dom'
 
 export default function ErrorComp() {
   const url = window.location.origin

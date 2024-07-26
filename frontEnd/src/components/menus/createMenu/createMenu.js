@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import MenuSearchBar from './searchBar/menuSearchBar'
-import { CreateMenuDataContext, CreateMenuSelectedProdArr, IsSignedInContext } from '../../../contexts';
+import { CreateMenuDataContext, IsSignedInContext } from '../../../contexts';
 import SelectedItem from './selectedItem';
 import Table from '../table/table';
 import { ApiUrl, MenuTableDataApi, apiMethod } from '../../../services/apiServices';
@@ -8,9 +8,7 @@ import headers from "../table/headers.json"
 import "./createMenuCss.css"
 import { useForm } from 'react-hook-form';
 import { validateMenuSchema } from '../../../schemas/menuProdSchema';
-import Joi from 'joi';
 import { useNavigate } from 'react-router-dom';
-import { ValidateUser } from '../../../services/authentication';
 
 export default function CreateMenu() {
   const { isSignedIn } = useContext(IsSignedInContext)
@@ -23,7 +21,7 @@ export default function CreateMenu() {
 
   const [arr, setArr] = useState([]);
   const [tableData, setTableData] = useState(undefined);
-  const { register, setValue, handleSubmit, formState: { errors } } = useForm()
+  const { register, setValue, handleSubmit, formState: {  } } = useForm()
   const currentNameRef = useRef()
   const navigate = useNavigate()
 

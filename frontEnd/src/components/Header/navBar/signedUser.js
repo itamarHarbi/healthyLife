@@ -1,12 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import '../../../style/signIn.css'
-import SignduserDropDown from './signduserDropDown'
 import { apiGet } from '../../../services/apiServices';
-import { LogOut } from '../../../services/authentication';
 import { IsSignedInContext } from '../../../contexts';
 
 export default function SignedUser() {
-  const { isSignedIn, setIsSignedIn } = useContext(IsSignedInContext)
+  const {  setIsSignedIn } = useContext(IsSignedInContext)
   const [userData, setUserData] = useState(null)
   function menuToggle() {
     const toggleMenu = document.querySelector(".menu");
@@ -59,7 +57,7 @@ export default function SignedUser() {
               <i className="fa fa-lg fa-pencil-square-o pe-1" aria-hidden="true"></i> <a href="/menus/createmenu">יצירת מתכון</a>
             </li>
             <li onClick={logOut}>
-              <i className="fa fa-sign-out pe-1" aria-hidden="true" ></i><a>התנתקות</a>
+              <i className="fa fa-sign-out pe-1" aria-hidden="true" ></i><a href='#'>התנתקות</a>
             </li>
           </ul>
         </div>
