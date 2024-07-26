@@ -6,7 +6,6 @@ import { Suspense, useEffect, useState } from 'react';
 import { AuthToken, ValidateUser } from './services/authentication';
 import { ApiUrl, apiMethod } from './services/apiServices';
 import MainHeader from './components/Header/mainHeader';
-import Loading from './components/test/loading';
 
 function App() {
   const token = localStorage.getItem("Healthy-Token")

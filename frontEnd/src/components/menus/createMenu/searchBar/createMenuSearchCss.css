@@ -1,6 +1,6 @@
-.addItemRow *{
+/* .addItemRow *{
     z-index: 2;
-}
+} */
 .addItemRow{
     min-height: 50px;
     font-size: 1.2em;
@@ -11,7 +11,12 @@
 .addItemRow>div {
     border-left: 1px rgb(186, 186, 186) solid;
 }
-
+.z2{
+    z-index: 2;
+}
+.css-1nmdiq5-menu{
+    z-index: 20;
+}
 
 #select-item * {
     border: none;

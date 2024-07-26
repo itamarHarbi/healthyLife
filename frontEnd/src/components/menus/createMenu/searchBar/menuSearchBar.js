@@ -5,7 +5,6 @@ import SelectMida from './selectMida'
 import NumInput from './numInput'
 import "./createMenuSearchCss.css"
 import { CreateMenuDataContext } from '../../../../contexts'
-import { date } from 'joi'
 
 export default function MenuSearchBar() {
     const [isActive, setIsActive] = useState(false)
@@ -64,7 +63,7 @@ export default function MenuSearchBar() {
                 <form onSubmit={methods.handleSubmit(onSubmit)}>
                     <div className='d-flex row addItemRow border  rounded-2  shadow bg-light m-0 p-2'>
                         <SearchItem
-                            class={"col-12 col-lg-7 p-0 border border-lg-start"}
+                            class={"col-12 col-lg-7 p-0 border border-lg-start z2"}
                             activate={activate}
                         />
                         <SelectMida

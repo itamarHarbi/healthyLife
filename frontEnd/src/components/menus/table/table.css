@@ -5,14 +5,14 @@
 .header {
     padding: 5px ;
     white-space: nowrap;
-    font-size: larger;
+    font-size: 2vw;
 }
 .header span{
     font-weight: 400;
-    font-size: small;
+    font-size: .7vw;
 }
 td{
-    font-size: medium;
+    font-size: 2vw;
 }
 
 td:nth-child(1),

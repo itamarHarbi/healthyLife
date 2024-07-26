@@ -38,9 +38,7 @@ export default function CreateMenu() {
         const data = {
           headers, prods: apiData
         }
-        if (arr.length > 0) { setTableData(data) }
-        else { setTableData(undefined) }
-        console.log(arr.length);
+        return data
       }
     } catch (error) {
       console.log(error);
@@ -95,11 +93,24 @@ export default function CreateMenu() {
   }
 
   useEffect(() => {
+    let isCancaled = false
     try {
       setValue("products", arr)
-      getTableData(arr)
+      getTableData(arr).then(
+        (res) => {
+          if (!isCancaled) {
+            if (arr.length > 0) { setTableData(res) }
+            else { setTableData(undefined) }
+          }
+        }
+      )
+
     } catch (error) {
       console.log(error);
+    }
+
+    return () => {
+      isCancaled = true
     }
   }, [arr])
   loggedIn()
@@ -116,12 +127,12 @@ export default function CreateMenu() {
 
       <div div className='container main_create_menu'>
         <h1 className='h1 text-decoration-underline mb-4 text-shadow'>יצירת מתכון חדש</h1>
-        <div className='border rounded border-2 mb-4'>
+        <div className=' mb-4'>
           <h2 className=''>בחירת מוצרים:</h2>
           <MenuSearchBar />
         </div>
 
-        <div className='border rounded border-2 mb-4 p-1'>
+        <div className=' mb-4 p-1'>
           <div className='d-flex   border-bottom-5'>
 
             <h2 className=' h2 w-auto  pe-3'>מוצרים שנבחרו:</h2>
@@ -133,7 +144,7 @@ export default function CreateMenu() {
             })}
           </ul>
         </div>
-        <div className='border rounded border-2 mb-4'>
+        <div className=' mb-4'>
           <div className='d-flex p-1'>
             <h2 className='h2'> טבלת ערכים:</h2>
           </div>

@@ -36,7 +36,7 @@ export default function Table({ data }) {
         <table className='table table-striped '>
 
           {/* Generates all headers */}
-          <thead style={{ zIndex: "1000", position: "sticky", top: "0", right: "0" }}>
+          <thead style={{ zIndex: "1", position: "sticky", top: "0", right: "0" }}>
             <tr>
               {
                 data.headers.map((item) => {
@@ -65,7 +65,7 @@ export default function Table({ data }) {
                   {data.headers.map(item => {
                     if (isSum(item.id)) return <td
                       style={{ position: item.id == 'shmmitzrach' ? "sticky" : "", right: item.id == 'shmmitzrach' ? "0" : "" }}
-                      className='border text-center' > <div>{Object.getOwnPropertyDescriptor(i, item.id).value}</div></td>
+                      className='border text-center' > <div className=''>{Object.getOwnPropertyDescriptor(i, item.id).value}</div></td>
                   })}
                 </tr>
               })
@@ -75,7 +75,7 @@ export default function Table({ data }) {
             {
               <tr style={{ position: "sticky", bottom: "0", background: "red!important" }} >
                 {data.headers.map(item => {
-                  if (isSum(item.id)) return <td style={{ whiteSpace: "nowrap", fontSize: "0.8em", fontWeight: "bolder", position: item.id == 'shmmitzrach' ? "sticky" : "", right: item.id == 'shmmitzrach' ? "0" : "" }} className='border text-center' > {Object.getOwnPropertyDescriptor(sum, item.id)?.value}</td>
+                  if (isSum(item.id)) return <td style={{ whiteSpace: "nowrap",  fontWeight: "bolder", position: item.id == 'shmmitzrach' ? "sticky" : "", right: item.id == 'shmmitzrach' ? "0" : "" }} className='border text-center' > {Object.getOwnPropertyDescriptor(sum, item.id)?.value}</td>
                 })}
               </tr>
             }

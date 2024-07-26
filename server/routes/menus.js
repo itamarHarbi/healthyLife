@@ -6,6 +6,7 @@ const axios = require("axios");
 const { string, object, array, date } = require("joi");
 const { UserModel } = require("../models/usersModel");
 const { default: mongoose } = require("mongoose");
+const { menuSearchController } = require("../controllers/menuSearch");
 
 
 // GET , POST , PUT , DELETE
@@ -106,21 +107,35 @@ router.get("/create/getApiData/", async (req, res) => {
 
 router.get("/banners", async (req, res) => {
   let userId
+  const q = req.query.q
+  let qR = ""
+  if (q) {
+    const allWords = q.split(" ")
+    allWords.forEach(word => {
+      // word.removeAll(" ")
+      if (word.length > 0)
+        qR += `(?=.*${word})`
+    })
+  }
+  console.log(qR);
+
+
+  // Pulling userData if submited ----
   const userName = req.headers.username
   if (userName) {
     try {
       const userData = await UserModel.findOne({ userName: userName })
       userId = userData._doc._id
-      console.log(userId);
+      // console.log(userId);
     }
-
     catch {
 
     }
   }
+  // -------- 
 
   try {
-    const length = await MenuModel.find(userId ? { user_id: userId } : {}).count()
+    const length = await MenuModel.find((userId) ? { user_id: userId } : (q) ? { "name": { $regex: qR } } : {}).count()
 
     // Define the limit and page number for pagination
     let limit = req.query.limit || 5;
@@ -128,20 +143,26 @@ router.get("/banners", async (req, res) => {
 
     // Calculate the offset based on the page number and limit
     let offset = length - (page * limit);
-    if (offset < 0 && offset + limit >= 0) {
-      limit = ((offset) + (limit));
+    console.log(offset);
+    if (offset < 0 && (offset + limit) > 0) {
+      limit = (offset + limit);
       offset = 0;
     }
-    console.log(offset);
-    const menus = await MenuModel.find(userId ? { user_id: userId } : {})
+    //query from DB
+    const menus = await MenuModel.find(
+      (userId) ? { user_id: userId }
+        : (q) ? { "name": { $regex: qR } } : {}
+    )
       .skip(offset)
       .limit(limit)
-
+    // Sort by date
     menus.sort((a, b) => {
-
       return new Date(b.date_created) - new Date(a.date_created);
     })
 
+    console.log(q);
+
+    // Filter data for only relevance keys----
     const filteredData = await (menus.map(async (item) => {
       const tempUserData = await UserModel.findOne({ _id: item.user_id })
       const userData = tempUserData._doc
@@ -159,6 +180,8 @@ router.get("/banners", async (req, res) => {
         userData
       }
     }))
+    //--------
+
     const result = await Promise.all(filteredData).then(arrOfResults => { return arrOfResults })
 
     res.json(
@@ -167,8 +190,6 @@ router.get("/banners", async (req, res) => {
         limit,
         page,
         "data": result,
-
-
       })
   }
 
@@ -178,6 +199,8 @@ router.get("/banners", async (req, res) => {
   }
 })
 
+router.get("/search/byQ", menuSearchController.banners.bannersByQ)
+router.get("/search", menuSearchController.nameOnly)
 
 
 
@@ -246,15 +269,15 @@ router.delete("/:id", auth, async (req, res) => {
     console.log(req.tokenData);
     if (menu.user_id === req.tokenData._id) {
       await MenuModel.deleteOne({ _id: req.params.id })
-      res.status(200).json({"msg":"Menu deleted seccefully"})
+      res.status(200).json({ "msg": "Menu deleted seccefully" })
     }
     else {
       console.log("no");
-      res.status(502).json({"msg":"You don't have premission"})
+      res.status(502).json({ "msg": "You don't have premission" })
     }
   }
   catch (err) {
-    res.status(502).json({err,"msg":"bad request"})
+    res.status(502).json({ err, "msg": "bad request" })
   }
 })
 

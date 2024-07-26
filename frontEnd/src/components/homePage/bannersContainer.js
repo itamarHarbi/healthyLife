@@ -17,6 +17,7 @@ export default function BannersContainer(props) {
         try {
             const res = await apiGet(`menus/banners?page=${page}`,props.userName||"")
             const data = res.data
+            console.log(data);
             delete res.data
             return { index: res, banners: [...banners, ...data] }
 
@@ -29,7 +30,7 @@ export default function BannersContainer(props) {
     const data = useMemo(
         () => fetchData().then(
             (resolve) => {
-                console.log(resolve);
+                // console.log(resolve);
                 setReturnedPage(resolve.index.page)
                 resolve.banners != banners &&
                     setBanners(resolve.banners)

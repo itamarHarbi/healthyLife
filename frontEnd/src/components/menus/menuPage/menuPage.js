@@ -31,7 +31,7 @@ export default function MenuPage() {
     }
     useEffect(() => {
         renderComponent()
-    }, [])
+    }, [menuId])
 
 
 
