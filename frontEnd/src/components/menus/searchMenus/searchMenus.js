@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { apiGet } from '../../../services/apiServices';
-import { FloatingLabel } from 'react-bootstrap';
 import SearchBox from '../../searchBox/searchBox';
 
 export default function SearchMenus() {

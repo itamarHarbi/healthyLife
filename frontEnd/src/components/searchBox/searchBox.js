@@ -1,5 +1,5 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
-import SearchInput from './searchInput'
+import './style/searchInput.css'
 import { PropTypes } from "prop-types"
 
 

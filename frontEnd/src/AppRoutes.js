@@ -1,5 +1,5 @@
-import React, { useContext, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider, createRoutesFromElements, useNavigate } from "react-router-dom";
+import React, { useContext } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CreateMenu from './components/menus/createMenu/createMenu';
 import MainHeader from './components/Header/mainHeader'
 import MenuPage from './components/menus/menuPage/menuPage';
@@ -8,7 +8,6 @@ import SignUpMain from './components/newSignUp/SignUpMain';
 import { IsSignedInContext } from './contexts';
 import ProfilePage from './components/profilePage/profilePage';
 import SearchPage from './components/searchPage/searchPage';
-import Parent from './components/test/parent';
 import HomePage from './components/homePageFolder/homePage'
 import Footer from './components/footer/footer';
 export default function AppRoutes() {

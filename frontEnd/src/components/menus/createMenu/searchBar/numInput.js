@@ -1,12 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { useCol } from 'react-bootstrap/esm/Col'
+import React, { useContext, useState } from 'react'
 import { useFormContext } from 'react-hook-form'
 import { CreateMenuDataContext } from '../../../../contexts'
 
 export default function NumInput(props) {
   const [inputVal, setInputVal] = useState()
-  const { register, watch, getValues } = useFormContext()
-  const [dis, setDis] = useState(true)
+  const { register } = useFormContext()
+  // const [dis, setDis] = useState(true)
   const { setCurrentItem, currentItem, currentMeas, setCurrentMeas,currentAmount,setCurrentAmount } = useContext(CreateMenuDataContext)
 
 

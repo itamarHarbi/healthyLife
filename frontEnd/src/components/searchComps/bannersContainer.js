@@ -1,5 +1,4 @@
-import React, { useEffect, useMemo } from 'react'
-import UseBanners from '../../hooks/useBanners';
+import React, {  useMemo } from 'react'
 import { useState } from 'react';
 import { apiGet } from '../../services/apiServices';
 import MenuBanner from './menuBanner';
@@ -32,7 +31,7 @@ export default function BannersContainer(props) {
             (resolve) => {
                 // console.log(resolve);
                 setReturnedPage(resolve.index.page)
-                resolve.banners != banners &&
+                resolve.banners !== banners &&
                     setBanners(resolve.banners)
             },
             (reject) => { setErrorClass("d-block") }

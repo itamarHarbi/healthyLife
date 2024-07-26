@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Image, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { OverlayTrigger, Tooltip } from 'react-bootstrap'
 
 export default function InfoOverlay({ msg, _id }) {
     return (

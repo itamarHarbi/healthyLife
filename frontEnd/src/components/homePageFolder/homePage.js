@@ -31,7 +31,7 @@ export default function HomePage() {
                             </div>
                             <div className='box'>
                                 <div className='i-wrap mx-auto'>
-                                    <i class="bi bi-calculator"></i>
+                                    <i className="bi bi-calculator"></i>
                                 </div>
                                 מחשבים קלוריות
                             </div>

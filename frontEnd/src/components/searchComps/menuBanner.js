@@ -16,7 +16,7 @@ export default function MenuBanner(props) {
             <div className='banner-head d-flex justify-content-between pt-4  p-2' >
                 <div className='banHeadRight d-flex align-items-center '>
                     <div className='profilePicWrap me-1 '>
-                        <img src={user.profileImage}></img>
+                        <img src={user.profileImage} alt='profile imaage'></img>
                     </div>
                     <span>
                         <a href={`/${user.userName}`}>
@@ -46,7 +46,7 @@ export default function MenuBanner(props) {
                     </ul>
                 }
                 <div className='text-end p-2'>
-                    <a className='link' onClick={() => { navigate("/menus/post?id=" + data._id) }}>המשך קריאה...</a>
+                    <div className='keepRreading' onClick={() => { navigate("/menus/post?id=" + data._id) }}>המשך קריאה...</div>
                 </div>
             </div>
         </div>

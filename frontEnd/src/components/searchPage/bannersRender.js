@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { apiGet } from '../../services/apiServices'
 import MenuBanner from '../searchComps/menuBanner';
 

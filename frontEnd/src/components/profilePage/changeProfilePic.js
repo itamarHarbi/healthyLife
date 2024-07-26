@@ -8,9 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function ChangeProfilePic({ close, className }) {
     const [allPics, setAllPics] = useState(null)
-    const [error, setError] = useState(null)
 
-    const { data, setData } = useContext(ProfilePageContext) 
+    const { data } = useContext(ProfilePageContext)
 
     const getAllPic = async (t) => { // t for number of tries
         try {
@@ -23,9 +22,9 @@ export default function ChangeProfilePic({ close, className }) {
     }
 
     const changeImage = async (url) => {
-        
+
         const current = data.profileImage
-        console.log("1",current);
+        console.log("1", current);
         data.profileImage = url
         try {
             const res = await apiMethod(
@@ -37,7 +36,6 @@ export default function ChangeProfilePic({ close, className }) {
             )
             console.log(res);
         } catch (error) {
-            const user= data;
             data.profileImage = current
             close.setUpdate(!close.update)
             toast.error("משהו השתבש, נא נסו מאוחר יותר")
@@ -59,9 +57,8 @@ export default function ChangeProfilePic({ close, className }) {
 
                 <div className='mx-auto my-auto bg-light '>
                     <div className='imgContainer d-flex flex-wrap position-relative '>
-                        {error ? <p>dsdsd</p> :
 
-                            (allPics ?
+                         {   allPics ?
                                 allPics.map(i => {
                                     if (data.profileImage === i)
                                         return <ProfileImage _onClick={() => { changeImage(i) }} className={"col-3 p-2 active "} img={i} />
@@ -71,7 +68,7 @@ export default function ChangeProfilePic({ close, className }) {
                                 })
                                 :
                                 <PageLoading />
-                            )
+                            
                         }
 
                     </div>

@@ -7,7 +7,7 @@ export default function Footer() {
       <div className='container'>
         <div className='d-flex justify-content-around fs-3 '>
           <div className='text-center'>
-            <a href='https://github.com/itamarHarbi' target='_blank'>
+            <a href='https://github.com/itamarHarbi' target='_blank' rel="noopener noreferrer">
               <i className="bi bi-github"></i>
             </a>
 

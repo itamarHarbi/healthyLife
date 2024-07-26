@@ -1,12 +1,11 @@
 import React, { useContext, useEffect } from 'react'
-import { useForm, SubmitHandler } from "react-hook-form"
+import { useForm} from "react-hook-form"
 import "../../style/signUpStyle.css"
-import Joi, { allow } from 'joi';
+import Joi from 'joi';
 import { joiResolver } from '@hookform/resolvers/joi';
 import { ApiUrl, KEY_TOKEN, apiMethod } from '../../services/apiServices';
 import { useNavigate } from 'react-router-dom';
 import { IsSignedInContext } from '../../contexts';
-import { GetUserId, SetUserId } from '../../services/authentication';
 import InfoOverlay from '../overlays/infoOverlay';
 
 export default function SignUpMain() {
@@ -56,10 +55,10 @@ export default function SignUpMain() {
 
             // console.log(errorKey);
             // console.log(Object.values(errorType)[0]);
-            if (Object.values(errorType)[0] == 1) {
+            if (Object.values(errorType)[0] === 1) {
                 const errorKey = Object.keys(errorType)[0];
                 console.log("asdas");
-                errorKey == 'email' ?
+                errorKey === 'email' ?
                     setError("email", { type: 'custom', message: `*כתובת מייל כבר בשימוש` })
                     :
                     setError(errorKey, { type: 'custom', message: `*שם משתמש תפוס` })

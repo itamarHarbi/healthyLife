@@ -4,10 +4,10 @@ import ChangeProfilePic from './changeProfilePic'
 import { ProfilePageContext } from '../../contexts'
 
 export default function ProfileImageWrap() {
- const [update,setUpdate] = useState(true);
+  const [update, setUpdate] = useState(true);
   const [show, setShow] = useState("d-none")
   const showHide = () => {
-    show == "d-none" ?
+    show === "d-none" ?
       setShow("d-flex")
       :
       setShow("d-none")
@@ -15,12 +15,11 @@ export default function ProfileImageWrap() {
   }
   const { data } = useContext(ProfilePageContext)
 
-  useEffect(() => 
-    { 
+  useEffect(() => {
 
-    }, [data])
+  }, [data])
 
-  show=="d-flex" ? document.body.style.overflow = "hidden" : document.body.style.overflow = "unset"
+  show === "d-flex" ? document.body.style.overflow = "hidden" : document.body.style.overflow = "unset"
   return (
     <>
       {
@@ -29,7 +28,7 @@ export default function ProfileImageWrap() {
           :
           <ProfileImage alt={"profileImage"} img={data.profileImage} className={"profileImage noAuther "} />
       }
-      {show && <ChangeProfilePic close={{showHide,update,setUpdate}} className={show} />}
+      {show && <ChangeProfilePic close={{ showHide, update, setUpdate }} className={show} />}
     </>
   )
 }

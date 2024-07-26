@@ -46,3 +46,10 @@ display: none;
 .menuBanner .descripWrap p{
 font-weight: 500;
 }
+.keepRreading:hover{
+    color: rgb(255, 52, 52);
+    transition: 100ms;
+}
+.keepRreading{
+cursor: pointer;
+}

@@ -1,21 +1,11 @@
-import { React, useContext, useState } from 'react'
+import { React,useState } from 'react'
 import Nav from 'react-bootstrap/Nav';
 import LoginForm from './loginForm';
 import { ActiveContext } from './context'
-import { AuthToken } from '../../../services/authentication';
-import { IsSignedInContext } from '../../../contexts';
 
 export default function Login() {
-    const { isSignedIn, setIsSignedIn } = useContext(IsSignedInContext)
-
-    // AuthToken()
-    // const ta = async () => {
-    //     await AuthToken()
-    //     console.log(isSignedIn);
-    // }
 
     const [use, set] = useState(false)
-    const [bodyScroll, setBodyScroll] = useState(false)
     const changeView = (req) => {
         set(req)
         req
@@ -24,9 +14,6 @@ export default function Login() {
             :
             document.body.style.overflow = "unset"
     }
-    // ta()
-
-    // console.log("Main:", _use);
 
     return (
         <ActiveContext.Provider value={{ changeView, use }}>

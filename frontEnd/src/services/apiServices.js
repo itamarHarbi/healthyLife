@@ -1,17 +1,17 @@
 import axios from "axios";
 
 
-export const ApiUrl = "http://localhost:3001";
+export const ApiUrl = process.env.REACT_APP_API_URL || "http://localhost:3001";
 export const KEY_TOKEN = "Healthy-Token"
 
-export const apiGet = async (_url,_header) => {
+export const apiGet = async (_url, _header) => {
   try {
     const res = await axios({
       method: "GET",
       url: "http://localhost:3001/" + _url,
       headers: {
         "x-api-key": localStorage[KEY_TOKEN],
-        "username":_header
+        "username": _header
       }
     })
     return res.data;
@@ -35,7 +35,7 @@ export const apiMethod = async (_url, _method, _body = {}) => {
     return res;
   }
   catch (err) {
-    throw(err)
+    throw (err)
   }
 }
 
