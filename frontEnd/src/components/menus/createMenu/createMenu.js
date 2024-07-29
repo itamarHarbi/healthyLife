@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, {  useEffect, useRef, useState } from 'react'
 import MenuSearchBar from './searchBar/menuSearchBar'
-import { CreateMenuDataContext, IsSignedInContext } from '../../../contexts';
+import { CreateMenuDataContext } from '../../../contexts';
 import SelectedItem from './selectedItem';
 import Table from '../table/table';
 import { ApiUrl, MenuTableDataApi, apiMethod } from '../../../services/apiServices';
@@ -11,11 +11,10 @@ import { validateMenuSchema } from '../../../schemas/menuProdSchema';
 import { useNavigate } from 'react-router-dom';
 
 export default function CreateMenu() {
-  const { isSignedIn } = useContext(IsSignedInContext)
   // store search bar data
   const [currentItem, setCurrentItem] = useState(undefined);
   const [currentMeas, setCurrentMeas] = useState(null);
-  const [currentAmount, setCurrentAmount] = useState("");
+  const [currentAmount, setCurrentAmount] = useState(""); 
   //-------------
 
 
