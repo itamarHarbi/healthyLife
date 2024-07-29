@@ -1,16 +1,12 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import Select from 'react-select';
-import { useFormContext } from 'react-hook-form'
 import { apiGetMida } from '../../../../services/apiServices';
 import { CreateMenuDataContext } from '../../../../contexts';
-import { isDisabled } from '@testing-library/user-event/dist/utils';
-import { ref } from 'joi';
 
 export default function SelectMida(props) {
-    const [_isDisabled, set_isDisabled] = useState(true)
     const selectRef = useRef()
     const [midot, setMidot] = useState(null)
-    const { currentItem, setCurrentItem, currentMeas, setCurrentMeas, currentNameRef } = useContext(CreateMenuDataContext)
+    const { currentItem, currentMeas, setCurrentMeas} = useContext(CreateMenuDataContext)
     const refrence = useRef();
     refrence.current = currentItem
 
@@ -48,10 +44,6 @@ export default function SelectMida(props) {
         // Setting the values for the form
         try {
             setCurrentMeas(e)
-            // setValue("measName", e.label)
-            // setValue("measCode", e.code)
-            // setValue("measMultiplier", e.grams)
-
         } catch (error) {
             console.log(error);
         }
@@ -68,7 +60,6 @@ export default function SelectMida(props) {
                 loadingMessage={() => { return "מחפש..." }}
                 noOptionsMessage={() => { return "אין מידע" }}
                 options={midot}
-                // loadOptions={seta}
                 id='select-mida'
                 isRtl={true}
                 required={true}

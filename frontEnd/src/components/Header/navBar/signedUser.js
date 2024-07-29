@@ -11,7 +11,8 @@ export default function SignedUser() {
     toggleMenu.classList.toggle("active");
   }
 
-  const logOut = async () => {
+  const logOut = async (e) => {
+    e.preventDefault()
     try {
       localStorage.removeItem("Healthy-Token")
       setIsSignedIn(false)
@@ -56,8 +57,8 @@ export default function SignedUser() {
             <li>
               <i className="fa fa-lg fa-pencil-square-o pe-1" aria-hidden="true"></i> <a href="/menus/createmenu">יצירת מתכון</a>
             </li>
-            <li onClick={logOut}>
-              <i className="fa fa-sign-out pe-1" aria-hidden="true" ></i><a href='#'>התנתקות</a>
+            <li >
+              <i className="fa fa-sign-out pe-1" aria-hidden="true" ></i><a href='/#' onClick={logOut}>התנתקות</a>
             </li>
           </ul>
         </div>

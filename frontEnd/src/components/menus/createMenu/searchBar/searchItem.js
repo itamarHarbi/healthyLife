@@ -8,12 +8,9 @@ import { CreateMenuDataContext } from '../../../../contexts';
 
 const SearchItem = (props) => {
     const { setCurrentItem, currentItem, currentNameRef, setCurrentAmount } = useContext(CreateMenuDataContext)
-    const { setValue } = useFormContext()
-    const nameInput = useRef();
     const getProductsList = async (e) => {
         const url = ApiUrl + `/menus/create/searchItem?q=${e}`
         const data = (await axios.get(url)).data;
-        // console.log(data);
 
         return await data.map(op => {
             return { code: op.code, label: op.name }

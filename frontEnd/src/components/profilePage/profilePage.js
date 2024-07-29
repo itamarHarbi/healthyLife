@@ -30,6 +30,7 @@ export default function ProfilePage() {
 
     useEffect(() => {
         getData()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (error) return <ErrorComp />

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import "./menuPage.css"
-import { useNavigate, useParams, useRouteError, useSearchParams } from 'react-router-dom'
+import { useNavigate,  useSearchParams } from 'react-router-dom'
 import { apiGet } from '../../../services/apiServices'
 import headers from "../table/headers.json"
-import ErrorComp from '../../error/error'
 import Table from '../table/table'
 
 export default function MenuPage() {
@@ -12,7 +11,7 @@ export default function MenuPage() {
 
     const [data, setData] = useState(undefined)
 
-    const [searchParams, setSearchParams] = useSearchParams()
+    const [searchParams] = useSearchParams()
     const menuId = searchParams.get('id')
 
 
@@ -21,7 +20,6 @@ export default function MenuPage() {
             const apiData = await apiGet(`menus/post?id=${menuId}`)
             apiData.tableData.headers = headers
             console.log(apiData);
-            // console.log(headers);
             setData(apiData)
         }
         catch (err) {
@@ -31,6 +29,7 @@ export default function MenuPage() {
     }
     useEffect(() => {
         renderComponent()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [menuId])
 
 

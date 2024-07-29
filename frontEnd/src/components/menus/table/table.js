@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 // import data from '../tData.json'
 import "./table.css"
-import Scratch from '../createMenu/searchBar/searchItem';
-
 
 export default function Table({ data }) {
   console.log(data);
@@ -24,15 +22,17 @@ export default function Table({ data }) {
     await setSum(mergedObj)
   }
   const isSum = (id) => {
-    if (id == 'shmmitzrach') return true
+    if (id === 'shmmitzrach') return true
     if (!Object.getOwnPropertyDescriptor(sum, id) || (Object.getOwnPropertyDescriptor(sum, id).value) <= 0) return false
     return true
   }
-  useEffect(() => { getSum() }, [data])
+  useEffect(() => { getSum() }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    , [data])
 
   return (
     <>
-       <div className='tableWrap overflow-scroll border border-4 p-0'>
+      <div className='tableWrap overflow-scroll border border-4 p-0'>
         <table className='table table-striped '>
 
           {/* Generates all headers */}
@@ -43,14 +43,15 @@ export default function Table({ data }) {
 
                   if (isSum(item.id)) return <th
                     style={{
-                      position: item.id == 'shmmitzrach' ? "sticky" : "",
-                      right: item.id == 'shmmitzrach' ? "0" : "", top: item.id == 'shmmitzrach' ? "0" : "",
+                      position: item.id === 'shmmitzrach' ? "sticky" : "",
+                      right: item.id === 'shmmitzrach' ? "0" : "", top: item.id === 'shmmitzrach' ? "0" : "",
                     }}
                     className='border border-2 text-center header'>
 
                     {item.info.label}
-                    <span>{item.info.notes != "" && ` (${item.info?.notes.replace("יחידות מידה : ", "")})`}</span>
+                    <span>{item.info.notes !== "" && ` (${item.info?.notes.replace("יחידות מידה : ", "")})`}</span>
                   </th>
+                  return null
                 })
               }
             </tr>
@@ -63,9 +64,12 @@ export default function Table({ data }) {
               data.prods.map(i => {
                 return <tr>
                   {data.headers.map(item => {
-                    if (isSum(item.id)) return <td
-                      style={{ position: item.id == 'shmmitzrach' ? "sticky" : "", right: item.id == 'shmmitzrach' ? "0" : "" }}
-                      className='border text-center' > <div className=''>{Object.getOwnPropertyDescriptor(i, item.id).value}</div></td>
+                    if (isSum(item.id)) {
+                      return <td
+                        style={{ position: item.id === 'shmmitzrach' ? "sticky" : "", right: item.id === 'shmmitzrach' ? "0" : "" }}
+                        className='border text-center' > <div className=''>{Object.getOwnPropertyDescriptor(i, item.id).value}</div></td>
+                    }
+                    return null
                   })}
                 </tr>
               })
@@ -75,7 +79,8 @@ export default function Table({ data }) {
             {
               <tr style={{ position: "sticky", bottom: "0", background: "red!important" }} >
                 {data.headers.map(item => {
-                  if (isSum(item.id)) return <td style={{ whiteSpace: "nowrap",  fontWeight: "bolder", position: item.id == 'shmmitzrach' ? "sticky" : "", right: item.id == 'shmmitzrach' ? "0" : "" }} className='border text-center' > {Object.getOwnPropertyDescriptor(sum, item.id)?.value}</td>
+                  if (isSum(item.id)) return <td style={{ whiteSpace: "nowrap", fontWeight: "bolder", position: item.id === 'shmmitzrach' ? "sticky" : "", right: item.id === 'shmmitzrach' ? "0" : "" }} className='border text-center' > {Object.getOwnPropertyDescriptor(sum, item.id)?.value}</td>
+                  return null
                 })}
               </tr>
             }

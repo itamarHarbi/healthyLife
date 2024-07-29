@@ -25,8 +25,8 @@ export default function BannersContainer(props) {
         }
     }
 
-
-    const data = useMemo(
+// eslint-disable-next-line react-hooks/exhaustive-deps
+     useMemo(
         () => fetchData().then(
             (resolve) => {
                 // console.log(resolve);
@@ -36,6 +36,7 @@ export default function BannersContainer(props) {
             },
             (reject) => { setErrorClass("d-block") }
         )
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         , [page])
 
 

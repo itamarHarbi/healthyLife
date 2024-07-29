@@ -19,7 +19,6 @@ export default function SearchMenus() {
                 const data = await apiGet(
                     `menus/search?q=${newStr}`
                 )
-                console.log(data);
                 if (data.length < 1) return []
 
                 const results = await data.map(res => {
@@ -41,7 +40,6 @@ export default function SearchMenus() {
     const onSubmit = (e) => {
         e.preventDefault()
         const q = searchRef.current.input.value
-        console.log(q);
         navigate(`/search?q=${q}`)
         // onSelect()
     }

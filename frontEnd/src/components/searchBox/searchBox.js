@@ -82,7 +82,9 @@ const SearchBox = forwardRef(
             },
         }), [inputVal])
 
-        useEffect(() => { renderData() }, [inputVal])
+        useEffect(() => { renderData() }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        , [inputVal])
         return (
             <>
 

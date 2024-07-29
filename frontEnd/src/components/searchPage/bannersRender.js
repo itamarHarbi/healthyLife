@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { apiGet } from '../../services/apiServices'
 import MenuBanner from '../searchComps/menuBanner';
+import { useLocation } from 'react-router-dom';
 
 export default function BannersRender() {
     const [banners, setBanners] = useState([])
     const [loading, setloading] = useState(true)
     const [length, setLength] = useState(0)
-    const searchParams = new URLSearchParams(window.location.search);
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
     const q = searchParams.get('q') || ""
 
     const fetchData = async (last) => {
@@ -19,7 +21,6 @@ export default function BannersRender() {
             const data = await apiGet(url)
             setloading(false)
             setBanners([...banners, ...data.data])
-            console.log("len:", data.length);
             return data.length
         } catch (error) {
             console.log(error);
@@ -40,7 +41,9 @@ export default function BannersRender() {
 
     useEffect(() => {
         initialRender()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [q])
+    console.log(q);
 
 
     return (

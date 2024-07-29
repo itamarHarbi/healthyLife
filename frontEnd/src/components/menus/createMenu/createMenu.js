@@ -21,7 +21,7 @@ export default function CreateMenu() {
 
   const [arr, setArr] = useState([]);
   const [tableData, setTableData] = useState(undefined);
-  const { register, setValue, handleSubmit, formState: {  } } = useForm()
+  const { register, setValue, handleSubmit, } = useForm()
   const currentNameRef = useRef()
   const navigate = useNavigate()
 
@@ -43,15 +43,10 @@ export default function CreateMenu() {
     }
   }
 
-  const loggedIn = () => {
-    if (!isSignedIn)
-      throw ("")
-
-  }
 
   const deleteSelected = async (id) => {
     const tempArr = [...arr];
-    const index = tempArr.findIndex((item) => item.id == id)
+    const index = tempArr.findIndex((item) => item.id === id)
     await tempArr.splice(index, 1)
     setArr(tempArr)
 
@@ -102,16 +97,16 @@ export default function CreateMenu() {
           }
         }
       )
-
+      
     } catch (error) {
       console.log(error);
     }
-
+    
     return () => {
       isCancaled = true
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [arr])
-  loggedIn()
 
   return (
     <CreateMenuDataContext.Provider
